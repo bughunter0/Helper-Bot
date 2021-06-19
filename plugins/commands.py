@@ -1,4 +1,5 @@
-from pyrogram import Client, filters
+from pyrogram import Client as FayasNoushad
+from pyrogram import filters
 
 START_TEXT = """
 **Hello {} 😌
