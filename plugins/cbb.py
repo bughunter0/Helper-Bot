@@ -1,4 +1,5 @@
 from pyrogram import Client as FayasNoushad
+from plugins.commands import *
 
 @FayasNoushad.on_callback_query()
 async def cb_handler(bot, update):
