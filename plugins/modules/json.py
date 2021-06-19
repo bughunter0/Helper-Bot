@@ -1,5 +1,6 @@
 from pyrogram import Client as FayasNoushad
 from pyrogram import filters
+from io import BytesIO
 
 @FayasNoushad.on_message((filters.group | filters.private) & filters.command(["json"]))
 async def group(bot, update):
