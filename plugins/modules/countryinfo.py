@@ -27,8 +27,7 @@ Timezone : `{country.timezones()}`
         InlineKeyboardButton('Wikipedia', url=f'{country.wiki()}'),
         InlineKeyboardButton('Google', url=f'https://www.google.com/search?q={country_name}')
         ],[
-        InlineKeyboardButton('Channel', url='https://telegram.me/FayasNoushad'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/TheFayas')
+        InlineKeyboardButton('Join Updates Channel', url='https://telegram.me/FayasNoushad')
 
         ]]
     )
