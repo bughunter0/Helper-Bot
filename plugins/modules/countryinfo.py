@@ -28,7 +28,6 @@ Timezone : `{country.timezones()}`
         InlineKeyboardButton('Google', url=f'https://www.google.com/search?q={country_name}')
         ],[
         InlineKeyboardButton('Join Updates Channel', url='https://telegram.me/FayasNoushad')
-
         ]]
     )
     try:
