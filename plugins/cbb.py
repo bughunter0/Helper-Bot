@@ -1,7 +1,7 @@
-from pyrogram import Client as FayasNoushad
+from pyrogram import Client
 from plugins.commands import *
 
-@FayasNoushad.on_callback_query()
+@Client.on_callback_query()
 async def cb_handler(bot, update):
     if update.data == "home":
         await update.message.edit_text(
