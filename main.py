@@ -1,6 +1,7 @@
 import os
 import pyrogram
 from pyrogram import Client, filters
+from config import Config
 
 plugins = dict(root="plugins")
 
