@@ -1,8 +1,7 @@
-from pyrogram import Client as FayasNoushad
-from pyrogram import filters
+from pyrogram import Client, filters
 from io import BytesIO
 
-@FayasNoushad.on_message(filters.command(["json"]))
+@Client.on_message(filters.command(["json"]))
 async def group(bot, update):
     json = update.reply_to_message
     with BytesIO(str.encode(str(json))) as json_file:
