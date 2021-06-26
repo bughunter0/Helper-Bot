@@ -1,6 +1,7 @@
 import requests
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from config import *
 
 @Client.on_message(filters.command(["covid_info", "corona_info"]))
 async def covid_info(bot, update):
