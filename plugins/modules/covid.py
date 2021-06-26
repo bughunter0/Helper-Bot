@@ -1,3 +1,5 @@
+# Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
+
 import requests
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
