@@ -9,5 +9,6 @@ async def group(bot, update):
         json_file.name = "json.text"
         await json.reply_document(
             document=json_file,
-            reply_markup=BUTTONS
+            reply_markup=BUTTONS,
+            quote=True
         )
