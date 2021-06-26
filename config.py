@@ -5,6 +5,8 @@ BOT_TOKEN = os.environ["BOT_TOKEN"]
 API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
 
+COVID_API = "https://api.sumanjay.cf/covid/?country="
+
 START_TEXT = """
 **Hello {} 😌
 I am telegram developers bot.**
