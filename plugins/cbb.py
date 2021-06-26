@@ -1,5 +1,5 @@
 from pyrogram import Client
-from plugins.commands import *
+from config import *
 
 @Client.on_callback_query()
 async def cb_handler(bot, update):
