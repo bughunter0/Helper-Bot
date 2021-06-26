@@ -6,7 +6,7 @@ from plugins.commands import *
 @Client.on_message(
     filters.private &
     filters.command(["start", "help", "about"]) &
-    filters.user(AUTH_USERS) if AUTH_USERS else None
+    filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def command(bot, update):
     text = update.text
