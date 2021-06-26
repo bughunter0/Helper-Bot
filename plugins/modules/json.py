@@ -1,3 +1,5 @@
+# Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
+
 from pyrogram import Client, filters
 from io import BytesIO
 from config import *
