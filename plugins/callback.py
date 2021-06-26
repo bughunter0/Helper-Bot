@@ -23,5 +23,5 @@ async def cb_handler(bot, update):
             reply_markup=ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
-    else:
+    elif update.data == "close":
         await update.message.delete()
