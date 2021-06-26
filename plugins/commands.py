@@ -1,5 +1,4 @@
-from pyrogram import Client as FayasNoushad
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @FayasNoushad.on_message(filters.private & filters.command(["start"]))
