@@ -5,7 +5,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(
-    filters.private &
     filters.commands(["country_info", "country_information"]) &
     filters.user(AUTH_USERS) if AUTH_USERS else None
 )
