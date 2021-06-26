@@ -4,7 +4,7 @@ from countryinfo import CountryInfo
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-@Client.on_message(filters.private & filters.text)
+@Client.on_message(filters.private & filters.text & filters.user(AUTH_USERS) if AUTH_USERS else None)
 async def countryinfo(bot, update):
     country = CountryInfo(update.text)
     info = f"""
