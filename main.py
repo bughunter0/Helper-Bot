@@ -5,7 +5,7 @@ from config import *
 
 plugins = dict(root="plugins")
 
-FayasNoushad = Client(
+bot = Client(
     "Tools-Bot",
     bot_token = BOT_TOKEN,
     api_id = API_ID,
@@ -13,4 +13,4 @@ FayasNoushad = Client(
     plugins = plugins
 )
 
-FayasNoushad.run()
+bot.run()
