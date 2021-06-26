@@ -5,7 +5,14 @@ from io import BytesIO
 from config import *
 
 @Client.on_message(
-    filters.command(["json"]) &
+    filters.command(
+        [
+            "json",
+            "update_json",
+            "pyro_json",
+            "pyrogram_json"
+        ]
+    ) &
     filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def group(bot, update):
