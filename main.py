@@ -2,12 +2,14 @@ import os
 import pyrogram
 from pyrogram import Client, filters
 
+plugins = dict(root="plugins")
+
 FayasNoushad = Client(
     "Developers-Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    plugins = plugins = dict(root="plugins")
+    bot_token = Config.BOT_TOKEN,
+    api_id = Config.API_ID,
+    api_hash = Config.API_HASH,
+    plugins = plugins
 )
 
 FayasNoushad.run()
