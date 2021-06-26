@@ -35,6 +35,7 @@ Last Update : `{last_update}`
 Latitude : `{latitude}`
 Longitude : `{longitude}`
 Recovered : `{recovered}`
+
 Made by @FayasNoushad
 """
         await update.reply_text(
