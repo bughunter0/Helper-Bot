@@ -1,4 +1,5 @@
 import os
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 API_ID = int(os.environ["API_ID"])
