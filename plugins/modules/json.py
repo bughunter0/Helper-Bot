@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from io import BytesIO
+from config import *
 
 @Client.on_message(filters.command(["json"]))
 async def group(bot, update):
@@ -8,5 +9,5 @@ async def group(bot, update):
         json_file.name = "json.text"
         await json.reply_document(
             document=json_file,
-            reply_markup=JSON_BUTTON
+            reply_markup=BUTTONS
         )
