@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from io import BytesIO
 from config import *
 
-@Client.on_message(filters.command(["json"]))
+@Client.on_message(filters.command(["json"]) & filters.user(AUTH_USERS) if AUTH_USERS else None)
 async def group(bot, update):
     json = update.reply_to_message
     with BytesIO(str.encode(str(json))) as json_file:
