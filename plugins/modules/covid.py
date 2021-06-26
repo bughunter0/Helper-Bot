@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
-@Client.on_message(filters.command(["covid_info", "corona_info"]))
+@Client.on_message(filters.command(["covid_info", "corona_info"]) & filters.user(AUTH_USERS) if AUTH_USERS else None)
 async def covid_info(bot, update):
     try:
         country = update.text.split(" ", -1)
