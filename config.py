@@ -58,3 +58,9 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('Close ✖️', callback_data='close')
         ]]
     )
+
+BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')
+        ]]
+    )
