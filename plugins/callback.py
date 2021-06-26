@@ -25,3 +25,5 @@ async def cb_handler(bot, update):
         )
     elif update.data == "close":
         await update.message.delete()
+    elif "help+" in update.data:
+        cb_data = update.data.split("+", -1)
