@@ -1,7 +1,7 @@
 from pyrogram import Client
 from config import *
 
-@Client.on_callback_query()
+@Client.on_callback_query(filters.user(AUTH_USERS) if AUTH_USERS else None)
 async def cb_handler(bot, update):
     if update.data == "home":
         await update.message.edit_text(
