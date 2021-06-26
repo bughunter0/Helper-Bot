@@ -10,7 +10,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 )
 async def countryinfo(bot, update):
     country = update.text.split(" ", -1)
-    country = CountryInfo(update.text)
+    country = CountryInfo(country)
     info = f"""
 Name : `{country.name()}`
 Native Name : `{country.native_name()}`
