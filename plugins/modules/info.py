@@ -4,7 +4,10 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
-@Client.on_message((filters.private | filters.group) & filters.command(["info", "information"]))
+@Client.on_message(
+    (filters.private | filters.group) &
+    filters.command(["info", "information"])
+)
 async def info(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
         info = user_info(update.from_user)
