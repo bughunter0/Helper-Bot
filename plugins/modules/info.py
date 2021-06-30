@@ -26,3 +26,18 @@ def user_info(user):
     text += f"\n**Status:** {user.status}" if user.status else ""
     text += f"\n\nMade by @FayasNoushad"
     return text
+
+def chat_info(chat):
+    text = "--**Chat Details**--\n" 
+    text += f"\n**Title:** `{chat.title}`"
+    text += f"\n**Chat ID:** `{chat.id}`"
+    text += f"\n**Username:** @{chat.username}" if chat.username else ""
+    text += f"\n**Type:** `{chat.type}`"
+    text += f"\n**DC ID:** `{chat.dc_id}`"
+    text += f"\n**Is Verified:** True" if chat.is_verified else ""
+    text += f"\n**Is Restricted:** True" if chat.is_verified else ""
+    text += f"\n**Is Creator:** True" if chat.is_creator else ""
+    text += f"\n**Is Scam:** True" if chat.is_scam else ""
+    text += f"\n**Is Fake:** True" if chat.is_fake else ""
+    text += f"\n\nMade by @FayasNoushad"
+    return text
