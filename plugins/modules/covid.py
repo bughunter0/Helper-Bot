@@ -26,6 +26,7 @@ async def covid_info(bot, update):
         recovered = info['recovered']
         covid_info = f"""
 --**Covid 19 Information**--
+
 Country : `{country}`
 Actived : `{active}`
 Confirmed : `{confirmed}`
