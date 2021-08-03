@@ -1,5 +1,5 @@
-pyrogram==1.2.9
-tgcrypto==1.2.2
-requests==1.25.1
-countryinfo>=0.1.2
-pyshorteners==1.0.1
+pyrogram
+tgcrypto
+requests
+countryinfo
+pyshorteners
