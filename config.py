@@ -75,3 +75,5 @@ BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')
         ]]
     )
+
+SETTINGS_BUTTONS = InlineKeyboardMarkup()
