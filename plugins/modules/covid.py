@@ -24,8 +24,7 @@ async def covid_info(bot, update):
         latitude = info['latitude']
         longitude = info['longitude']
         recovered = info['recovered']
-        covid_info = f"""
---**Covid 19 Information**--
+        covid_info = f"""--**Covid 19 Information**--
 
 Country : `{country}`
 Actived : `{active}`
@@ -35,10 +34,7 @@ ID : `{info_id}`
 Last Update : `{last_update}`
 Latitude : `{latitude}`
 Longitude : `{longitude}`
-Recovered : `{recovered}`
-
-Made by @FayasNoushad
-"""
+Recovered : `{recovered}`"""
         await update.reply_text(
             text=covid_info,
             disable_web_page_preview=True,
