@@ -11,7 +11,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def countryinfo(bot, update):
     country = update.text.split(" ", -1)
     country = CountryInfo(country)
-    info = f"""
+    info = f"""--**Country Information**--
+
 Name : `{country.name()}`
 Native Name : `{country.native_name()}`
 Capital : `{country.capital()}`
@@ -22,8 +23,7 @@ Top Level Domains : `{country.tld()}`
 Calling Codes : `{country.calling_codes()}`
 Currencies : `{country.currencies()}`
 Residence : `{country.demonym()}`
-Timezone : `{country.timezones()}`
-"""
+Timezone : `{country.timezones()}`"""
     country_name = country.name()
     country_name = country_name.replace(" ", "+")
     reply_markup=InlineKeyboardMarkup(
