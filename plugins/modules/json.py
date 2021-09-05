@@ -24,3 +24,7 @@ async def group(bot, update):
             reply_markup=BUTTONS,
             quote=True
         )
+        try:
+            os.remove(json_file)
+        except:
+            pass
