@@ -33,7 +33,7 @@ Made by @FayasNoushad"""
 
 ABOUT_TEXT = """**About Me**--
 
-➠ **Bot :** ``Developers Bot` 🤖
+➠ **Bot :** [Developers Bot]({}) 🤖
 ➠ **Creator :** [Fayas](https://telegram.me/TheFayas)
 ➠ **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
 ➠ **Credits :** `Everyone in this journey`
