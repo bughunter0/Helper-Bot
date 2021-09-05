@@ -3,6 +3,7 @@
 import os
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
@@ -11,17 +12,14 @@ PRIVATE = os.environ.get("PRIVATE", "")
 
 COVID_API = "https://api.sumanjay.cf/covid/?country="
 
-START_TEXT = """
-**Hello {} 😌
+START_TEXT = """**Hello {} 😌
 I am telegram developers bot.**
 
 >> `I have more features for developers`
 
-Made by @FayasNoushad
-"""
+Made by @FayasNoushad"""
 
-HELP_TEXT = """
-**Hey, Follow these steps:**
+HELP_TEXT = """**Hey, Follow these steps:**
 
 I am a developer helper bot. Use the commands below for more.
 
@@ -31,20 +29,17 @@ I am a developer helper bot. Use the commands below for more.
 /help - For more help
 /about - For more about me
 
->> **Please join my [updates channel](https://telegram.me/FayasNoushad) for more bots and updates and Please contact [Fayas](https://telegram.me/TheFayas) for reporting, bugs, requests, and suggestions.**
+Made by @FayasNoushad"""
 
-Made by @FayasNoushad
-"""
+ABOUT_TEXT = """**About Me**--
 
-ABOUT_TEXT = """
 ➠ **Bot :** ``Developers Bot` 🤖
 ➠ **Creator :** [Fayas](https://telegram.me/TheFayas)
 ➠ **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
 ➠ **Credits :** `Everyone in this journey`
 ➠ **Language :** [Python3](https://python.org)
 ➠ **Library :** [Pyrogram](https://pyrogram.org)
-➠ **Server :** [Heroku](https://heroku.com)
-"""
+➠ **Server :** [Heroku](https://heroku.com)"""
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
