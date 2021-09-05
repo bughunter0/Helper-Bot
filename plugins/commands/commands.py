@@ -14,8 +14,6 @@ async def command(bot, update):
         await start(bot, update)
     else:
         text = text.split(" ", -1) if " " in text else text
-        else:
-            text = text
         if "help" in text:
             await help(bot, update)
         if "about" in text:
