@@ -22,7 +22,8 @@ BUTTONS = []
             "pyrogram_json"
         ]
     ) &
-    filters.user(AUTH_USERS) if PRIVATE else None
+    filters.user(AUTH_USERS) if PRIVATE else None,
+    group=1
 )
 async def group(bot, update):
     json = update.reply_to_message
