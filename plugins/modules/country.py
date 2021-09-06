@@ -21,8 +21,7 @@ BUTTONS = []
             "country_information"
         ]
     ) &
-    filters.user(BOT_OWNER) if PRIVATE else None,
-    group=1
+    filters.user(BOT_OWNER) if PRIVATE else None
 )
 async def country(bot, update):
     country = update.text.split(" ", 1)[1]
