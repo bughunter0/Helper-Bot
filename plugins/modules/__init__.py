@@ -38,6 +38,6 @@ async def modules(bot, update, cb=False):
         buttons.append(
             InlineKeyboardButton(
                 text=MODULES[module]["text"],
-                callback_data=module
+                callback_data="module"+module
             )
         )
