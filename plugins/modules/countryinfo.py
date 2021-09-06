@@ -23,7 +23,9 @@ Top Level Domains : `{country.tld()}`
 Calling Codes : `{country.calling_codes()}`
 Currencies : `{country.currencies()}`
 Residence : `{country.demonym()}`
-Timezone : `{country.timezones()}`"""
+Timezone : `{country.timezones()}`
+
+Made by @FayasNoushad"""
     country_name = country.name()
     country_name = country_name.replace(" ", "+")
     reply_markup=InlineKeyboardMarkup(
