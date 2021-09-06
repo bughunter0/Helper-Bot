@@ -37,6 +37,7 @@ MODULES = {
 
 
 async def modules_help(bot, update, cb=False):
+    text = "**Modules**"
     buttons = []
     for module in MODULES:
         button = InlineKeyboardButton(
@@ -48,6 +49,19 @@ async def modules_help(bot, update, cb=False):
         else:
             buttons[-1].append(button)
     reply_markup = InlineKeyboardMarkup(buttons)
+    if cb:
+        await update.message.edit_text(
+            text=text,
+            reply_markup=reply_markup,
+            disable_web_page_preview=True
+        )
+    else:
+        await update.reply_text(
+            text=text,
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            quote=True
+        )
 
 
 async def modules_commands(bot, update):
