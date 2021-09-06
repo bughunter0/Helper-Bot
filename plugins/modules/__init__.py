@@ -4,7 +4,7 @@
 # All rights reserved by FayasNoushad
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
-from . import country, covid, info, json
+from . import country, covid_info, information, response_json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
@@ -41,3 +41,15 @@ async def modules_help(bot, update, cb=False):
                 callback_data="module"+module
             )
         )
+
+
+async def modules_commands(bot, update):
+    command = update.text
+    if command.startswith("/country"):
+        await country(bot, update)
+    elif command.startswith("/covid"):
+        await covid_info(bot, update)
+    elif command.startswith("/info"):
+        await information(bot, update)
+    elif command.startswith("/json"):
+        await response_json(bot, update)
