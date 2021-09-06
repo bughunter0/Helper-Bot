@@ -6,6 +6,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
 
+API = "https://api.sumanjay.cf/covid/?country="
+
+
 async def covid_info(bot, update):
     try:
         country = update.text.split(" ", 1)[1]
