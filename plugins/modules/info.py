@@ -15,13 +15,7 @@ Forward a message from chat and reply /info"""
 BUTTONS = []
 
 
-@Client.on_message(
-    filters.command(
-        ["info", "information"]
-    ),
-    filters.user(BOT_OWNER) if PRIVATE else None
-)
-async def _info(bot, update):
+async def information(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
         info = user_info(update.from_user)
     elif update.reply_to_message and update.reply_to_message.forward_from:
