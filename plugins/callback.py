@@ -18,5 +18,5 @@ async def cb_handler(bot, update):
         await about(bot, update, cb=True)
     elif update.data == "close":
         await update.message.delete()
-    elif "module+" in update.data:
+    elif update.data.startswith("modules"):
         await modules_help(bot, update, cb=True)
