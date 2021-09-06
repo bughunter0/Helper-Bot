@@ -1,6 +1,6 @@
 # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
 
-from config import PRIVATE
+from config import *
 from pyrogram import Client
 from .commands import *
 from .modules import modules_help
