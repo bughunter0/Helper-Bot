@@ -8,7 +8,14 @@ from ..modules import modules_help
 
 @Client.on_message(
     filters.private &
-    filters.command &
+    filters.command(
+        [
+            "start",
+            "help",
+            "about",
+            "modules"
+        ]
+    ) &
     filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def command(bot, update):
