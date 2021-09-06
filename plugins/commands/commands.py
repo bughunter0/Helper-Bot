@@ -13,7 +13,7 @@ from .modules import modules_help
 )
 async def command(bot, update):
     text = update.text
-    if len(text.split()) == <= 1:
+    if len(text.split()) == 1:
         if text == "/start":
             await start(bot, update)
         elif text == "/help":
