@@ -6,15 +6,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
 
-TEXT = """**Covid 19 Information**
-
-`For getting covid information of a country`
-
-Send /covid with country name like `/covid India`"""
-
-BUTTONS = []
-
-
 async def covid_info(bot, update):
     try:
         country = update.text.split(" ", 1)[1]
