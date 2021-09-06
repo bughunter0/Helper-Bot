@@ -15,8 +15,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 MODULES = {
     "country": {
         "text": "Country Info",
-        "help_text": country.TEXT,
-        "help_buttons": country.BUTTONS
+        "help_text": """**Country Information**
+
+Send /country with country name for information of that country.
+
+Like :- `/country India`""",
+        "help_buttons": []
     },
     "covid": {
         "text": "Covid 19 Info",
