@@ -3,7 +3,7 @@
 from config import *
 from pyrogram import Client, filters
 from .commands import *
-from .modules import modules_help
+from ..modules import modules_help
 
 
 @Client.on_message(
