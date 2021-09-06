@@ -1,8 +1,8 @@
 # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
 
 from pyrogram import Client, filters
-from plugins.commands import *
-from .modules import modules
+from .commands import *
+from .modules import modules_help
 
 
 @Client.on_message(
@@ -28,4 +28,4 @@ async def command(bot, update):
         elif text == "about":
             await about(bot, update)
         else:
-            await modules(bot, update)
+            await modules_help(bot, update)
