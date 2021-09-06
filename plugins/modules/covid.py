@@ -14,10 +14,7 @@ Send /covid with country name like `/covid India`"""
 
 BUTTONS = []
 
-@Client.on_message(
-    filters.command(["corona", "covid", "covid_info", "corona_info"]) &
-    filters.user(BOT_OWNER) if PRIVATE else None
-)
+
 async def covid_info(bot, update):
     try:
         country = update.text.split(" ", 1)[1]
