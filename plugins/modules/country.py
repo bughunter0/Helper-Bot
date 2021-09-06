@@ -5,6 +5,12 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
+TEXT = """**Country Information**
+
+Send /country with country name for information of that country.
+
+Like :- `/country India`"""
+
 @Client.on_message(
     filters.commands(["country", "country_info", "country_information"]) &
     filters.user(AUTH_USERS) if PRIVATE else None
