@@ -24,8 +24,12 @@ Like :- `/country India`""",
     },
     "covid": {
         "text": "Covid 19 Info",
-        "help_text": covid.TEXT,
-        "help_buttons": covid.BUTTONS
+        "help_text": """**Covid 19 Information**
+
+`For getting covid information of a country`
+
+Send /covid with country name like `/covid India`""",
+        "help_buttons": []
     },
     "info": {
         "text": "Information",
