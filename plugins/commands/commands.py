@@ -16,7 +16,8 @@ from ..modules import modules_help
             "modules"
         ]
     ) &
-    filters.user(AUTH_USERS) if PRIVATE else None
+    filters.user(AUTH_USERS) if PRIVATE else None,
+    group=1
 )
 async def command(bot, update):
     text = update.text
