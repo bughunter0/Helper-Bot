@@ -14,7 +14,7 @@ Like :- `/country India`"""
 BUTTONS = []
 
 @Client.on_message(
-    filters.commands(
+    filters.command(
         [
             "country",
             "country_info",
