@@ -4,6 +4,14 @@ from pyrogram import Client, filters
 from io import BytesIO
 from config import *
 
+TEXT = """**Json**
+
+`For getting json response`
+
+Send /json command with reply a message."""
+
+BUTTONS = []
+
 
 @Client.on_message(
     filters.command(
