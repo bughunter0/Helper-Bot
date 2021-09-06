@@ -19,8 +19,7 @@ BUTTONS = []
     filters.command(
         ["info", "information"]
     ),
-    filters.user(BOT_OWNER) if PRIVATE else None,
-    group=1
+    filters.user(BOT_OWNER) if PRIVATE else None
 )
 async def _info(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
