@@ -10,6 +10,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 MODULES = {
     "country": {
         "text": "Country Info",
-        "button": []
+        "help_text": country.TEXT,
+        "help_buttons": country.BUTTONS
     }
 }
