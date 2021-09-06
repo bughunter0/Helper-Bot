@@ -4,6 +4,7 @@ from countryinfo import CountryInfo
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+
 @Client.on_message(
     filters.commands(["country_info", "country_information"]) &
     filters.user(AUTH_USERS) if PRIVATE else None
