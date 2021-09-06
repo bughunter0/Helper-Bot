@@ -3,6 +3,7 @@
 from pyrogram import Client, filters
 from plugins.commands import *
 
+
 @Client.on_message(
     filters.private &
     filters.command(["start", "help", "about"]) &
@@ -10,11 +11,16 @@ from plugins.commands import *
 )
 async def command(bot, update):
     text = update.text
-    if text == "/start":
-        await start(bot, update)
-    else:
-        text = text.split(" ", -1) if " " in text else text
-        if "help" in text:
+    if len(text.split()) == <= 1:
+        if text == "/start":
+            await start(bot, update)
+        elif text == "/help":
             await help(bot, update)
-        if "about" in text:
+        elif text == "/about":
+            await about(bot, update)
+    elif len(text.split()) > 1:
+        text = text.split(" ", 1)[1]
+        if text == "help":
+            await help(bot, update)
+        if text == "about":
             await about(bot, update)
