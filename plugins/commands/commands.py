@@ -2,7 +2,7 @@
 
 from config import *
 from pyrogram import Client, filters
-from .commands import *
+from . import *
 from ..modules import modules_help
 
 
