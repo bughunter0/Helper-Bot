@@ -5,16 +5,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
 
-TEXT = """**Information**
-
-`For getting user or chat information.`
-
-Send /info with user id
-Forward a message from chat and reply /info"""
-
-BUTTONS = []
-
-
 async def information(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
         info = user_info(update.from_user)
