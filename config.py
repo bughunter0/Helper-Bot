@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
-AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
+BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
 PRIVATE = bool(os.environ.get("PRIVATE", False))
 
 COVID_API = "https://api.sumanjay.cf/covid/?country="
