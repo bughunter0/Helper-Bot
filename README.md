@@ -1,6 +1,6 @@
 # Telegram-Helper-Bot
 
-A telegram helper bot for users.
+**A pyrogram pluggable telegram helper bot for users.**
 
 ---
 
