@@ -3,7 +3,7 @@
 from config import *
 from pyrogram import Client, filters
 from . import *
-from ..modules import modules_help
+from ..modules import modules_help, modules_commands
 
 
 @Client.on_message(
@@ -29,6 +29,8 @@ async def command(bot, update):
             await about(bot, update)
         elif text.startswith("/module"):
             await modules_help(bot, update)
+        else:
+            await modules_commands(bot, update)
     elif len(text.split()) > 1:
         text = text.split(" ", 1)[1]
         if text == "help":
@@ -37,3 +39,5 @@ async def command(bot, update):
             await about(bot, update)
         elif text.startswith("module"):
             await modules_help(bot, update)
+        else:
+            await modules_commands(bot, update)
