@@ -43,7 +43,11 @@ Forward a message from chat and reply /info""",
     },
     "json": {
         "text": "Json",
-        "help_text": json.TEXT,
+        "help_text": """**Json**
+
+`For getting json response`
+
+Send /json command with reply a message.""",
         "help_buttons": json.BUTTONS
     }
 }
