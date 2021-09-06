@@ -16,7 +16,6 @@ BUTTONS = []
 
 
 @Client.on_message(
-    (filters.private | filters.group) &
     filters.user(AUTH_USERS) if PRIVATE else None &
     filters.command(["info", "information"])
 )
