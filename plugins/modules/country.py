@@ -6,14 +6,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-TEXT = """**Country Information**
-
-Send /country with country name for information of that country.
-
-Like :- `/country India`"""
-BUTTONS = []
-
-
 async def country(bot, update):
     country = update.text.split(" ", 1)[1]
     country = CountryInfo(country)
