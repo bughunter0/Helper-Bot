@@ -4,7 +4,6 @@
 # All rights reserved by FayasNoushad
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
-from plugins.modules import country, covid, info, json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
