@@ -37,6 +37,9 @@ MODULES = {
 
 
 async def modules_help(bot, update, cb=False):
+    if update.data.startswith("modules+"):
+        await modules_cb(bot, update)
+        return
     text = "**Modules**"
     buttons = []
     for module in MODULES:
@@ -74,3 +77,7 @@ async def modules_commands(bot, update):
         await information(bot, update)
     elif command.startswith("/json"):
         await response_json(bot, update)
+
+
+async def modules_cb(bot, update):
+    module = update.data.split("+")
