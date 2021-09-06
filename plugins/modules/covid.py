@@ -16,7 +16,8 @@ BUTTONS = []
 
 @Client.on_message(
     filters.command(["corona", "covid", "covid_info", "corona_info"]) &
-    filters.user(AUTH_USERS) if PRIVATE else None
+    filters.user(AUTH_USERS) if PRIVATE else None,
+    group=1
 )
 async def covid_info(bot, update):
     try:
