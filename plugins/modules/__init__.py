@@ -30,3 +30,14 @@ MODULES = {
         "help_buttons": json.BUTTONS
     }
 }
+
+
+async def modules(bot, update, cb=False):
+    buttons = []
+    for module in MODULES:
+        buttons.append(
+            InlineKeyboardButton(
+                text=MODULES[module]["text"],
+                callback_data=module
+            )
+        )
