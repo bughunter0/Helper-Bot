@@ -39,7 +39,7 @@ Send /covid with country name like `/covid India`""",
 
 Send /info with user id
 Forward a message from chat and reply /info""",
-        "help_buttons": info.BUTTONS
+        "help_buttons": []
     },
     "json": {
         "text": "Json",
