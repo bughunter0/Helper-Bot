@@ -15,7 +15,7 @@ License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
 ## Deploy
 
-```
+```sh
 git clone https://github.com/TelegramHelpBot/Helper-Bot/tree/main
 cd Helper-Bot
 pip3 install -r requirements.txt
