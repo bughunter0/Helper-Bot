@@ -1,5 +1,6 @@
 # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
 
+from config import *
 from pyrogram import Client, filters
 from .commands import *
 from .modules import modules_help
