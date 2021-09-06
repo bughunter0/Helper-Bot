@@ -2,6 +2,7 @@
 
 from pyrogram import Client, filters
 from plugins.commands import *
+from .modules import modules
 
 
 @Client.on_message(
