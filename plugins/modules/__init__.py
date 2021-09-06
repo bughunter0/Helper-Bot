@@ -15,39 +15,22 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 MODULES = {
     "country": {
         "text": "Country Info",
-        "help_text": """**Country Information**
-
-Send /country with country name for information of that country.
-
-Like :- `/country India`""",
+        "help_text": "**Country Information**\n\nSend /country with country name for information of that country.\n\nLike :- `/country India`",
         "help_buttons": []
     },
     "covid": {
         "text": "Covid 19 Info",
-        "help_text": """**Covid 19 Information**
-
-`For getting covid information of a country`
-
-Send /covid with country name like `/covid India`""",
+        "help_text": "**Covid 19 Information**\n\n`For getting covid information of a country`\n\nSend /covid with country name like `/covid India`",
         "help_buttons": []
     },
     "info": {
         "text": "Information",
-        "help_text": """**Information**
-
-`For getting user or chat information.`
-
-Send /info with user id
-Forward a message from chat and reply /info""",
+        "help_text": "**Information**\n\n`For getting user or chat information.`\n\nSend /info with user id\n\nForward a message from chat and reply /info",
         "help_buttons": []
     },
     "json": {
-        "text": "Json",
-        "help_text": """**Json**
-
-`For getting json response`
-
-Send /json command with reply a message.""",
+        "text": "Response Json",
+        "help_text": "**Response Json**\n\n`For getting json response`\n\nSend /json command with reply a message.",
         "help_buttons": []
     }
 }
