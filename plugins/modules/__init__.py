@@ -37,7 +37,7 @@ MODULES = {
 
 
 async def modules_help(bot, update, cb=False):
-    if update.data.startswith("modules+"):
+    if cb and update.data.startswith("modules+"):
         await modules_cb(bot, update)
         return
     text = "**Modules**"
