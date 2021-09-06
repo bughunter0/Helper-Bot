@@ -8,9 +8,9 @@ from config import *
 
 TEXT = """**Covid 19 Information**
 
-Send /covid with country name for covid information of that country.
+`For getting covid information of a country`
 
-Like :- `/covid India`"""
+Send /covid with country name like `/covid India`"""
 
 BUTTONS = []
 
