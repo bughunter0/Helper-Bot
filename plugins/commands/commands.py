@@ -28,13 +28,13 @@ async def command(bot, update):
             await help(bot, update)
         elif text == "/about":
             await about(bot, update)
-        else:
-            await modules(bot, update)
+        elif text.stratswith("/module"):
+            await modules_help(bot, update)
     elif len(text.split()) > 1:
         text = text.split(" ", 1)[1]
         if text == "help":
             await help(bot, update)
         elif text == "about":
             await about(bot, update)
-        else:
+        elif text.stratswith("module"):
             await modules_help(bot, update)
