@@ -10,8 +10,6 @@ API_HASH = os.environ["API_HASH"]
 BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
 PRIVATE = bool(os.environ.get("PRIVATE", False))
 
-COVID_API = "https://api.sumanjay.cf/covid/?country="
-
 START_TEXT = """**Hello {} 😌
 I am telegram developers bot.**
 
