@@ -20,7 +20,7 @@ BUTTONS = []
 )
 async def covid_info(bot, update):
     try:
-        country = update.text.split(" ", -1)
+        country = update.text.split(" ", 1)[1]
         country = country.replace(" ", "+")
         r = requests.get(API + country)
         info = r.json()
