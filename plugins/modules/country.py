@@ -13,7 +13,13 @@ Like :- `/country India`"""
 BUTTONS = []
 
 @Client.on_message(
-    filters.commands(["country", "country_info", "country_information"]) &
+    filters.commands(
+        [
+            "country",
+            "country_info",
+            "country_information"
+        ]
+    ) &
     filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def countryinfo(bot, update):
