@@ -32,7 +32,7 @@ MODULES = {
 }
 
 
-async def modules(bot, update, cb=False):
+async def modules_help(bot, update, cb=False):
     buttons = []
     for module in MODULES:
         buttons.append(
