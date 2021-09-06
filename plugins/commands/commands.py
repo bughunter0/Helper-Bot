@@ -22,5 +22,5 @@ async def command(bot, update):
         text = text.split(" ", 1)[1]
         if text == "help":
             await help(bot, update)
-        if text == "about":
+        elif text == "about":
             await about(bot, update)
