@@ -13,7 +13,7 @@ Send /json command with reply a message."""
 BUTTONS = []
 
 
-async def group(bot, update):
+async def _json(bot, update):
     json = update.reply_to_message
     with BytesIO(str.encode(str(json))) as json_file:
         json_file.name = "json.text"
