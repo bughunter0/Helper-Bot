@@ -28,7 +28,7 @@ async def command(bot, update):
             await help(bot, update)
         elif text == "/about":
             await about(bot, update)
-        elif text.stratswith("/module"):
+        elif text.startswith("/module"):
             await modules_help(bot, update)
     elif len(text.split()) > 1:
         text = text.split(" ", 1)[1]
@@ -36,5 +36,5 @@ async def command(bot, update):
             await help(bot, update)
         elif text == "about":
             await about(bot, update)
-        elif text.stratswith("module"):
+        elif text.startswith("module"):
             await modules_help(bot, update)
