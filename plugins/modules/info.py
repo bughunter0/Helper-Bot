@@ -31,6 +31,7 @@ async def info(bot, update):
     except Exception as error:
         await update.reply_text(error)
 
+
 def user_info(user):
     text = "--**User Details:**--\n"
     text += f"\n**First Name:** `{user.first_name}`"
@@ -50,6 +51,7 @@ def user_info(user):
     text += f"\n**Status:** {user.status}" if user.status else ""
     text += f"\n\nMade by @FayasNoushad"
     return text
+
 
 def chat_info(chat):
     text = "--**Chat Details**--\n" 
