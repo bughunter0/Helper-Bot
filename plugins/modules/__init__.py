@@ -4,7 +4,7 @@
 # All rights reserved by FayasNoushad
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
-from .modules import country, covid
+from .modules import country, covid, info
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
@@ -18,5 +18,10 @@ MODULES = {
         "text": "Covid 19 Info",
         "help_text": covid.TEXT,
         "help_buttons": covid.BUTTONS
+    },
+    "info": {
+        "text": "Information",
+        "help_text": info.TEXT,
+        "help_buttons": info.BUTTONS
     }
 }
