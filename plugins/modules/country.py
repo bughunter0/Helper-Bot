@@ -13,16 +13,7 @@ Send /country with country name for information of that country.
 Like :- `/country India`"""
 BUTTONS = []
 
-@Client.on_message(
-    filters.command(
-        [
-            "country",
-            "country_info",
-            "country_information"
-        ]
-    ) &
-    filters.user(BOT_OWNER) if PRIVATE else None
-)
+
 async def country(bot, update):
     country = update.text.split(" ", 1)[1]
     country = CountryInfo(country)
