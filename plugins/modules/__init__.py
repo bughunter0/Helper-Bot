@@ -48,7 +48,7 @@ Forward a message from chat and reply /info""",
 `For getting json response`
 
 Send /json command with reply a message.""",
-        "help_buttons": json.BUTTONS
+        "help_buttons": []
     }
 }
 
