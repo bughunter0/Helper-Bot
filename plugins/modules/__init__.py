@@ -80,4 +80,4 @@ async def modules_commands(bot, update):
 
 
 async def modules_cb(bot, update):
-    module = update.data.split("+")
+    module = update.data.split("+")[1]
