@@ -39,12 +39,15 @@ MODULES = {
 async def modules_help(bot, update, cb=False):
     buttons = []
     for module in MODULES:
-        buttons.append(
-            InlineKeyboardButton(
-                text=MODULES[module]["text"],
-                callback_data="module"+module
-            )
+        button = InlineKeyboardButton(
+            text=MODULES[module]["text"],
+            callback_data="module"+module
         )
+        if len(buttons) == 0 or len(buttons[-1]) >= 2:
+            buttons.append([button])
+        else:
+            buttons[-1].append(button)
+    reply_markup = InlineKeyboardMarkup(buttons)
 
 
 async def modules_commands(bot, update):
