@@ -5,6 +5,16 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
 
+TEXT = """**Information**
+
+`For getting user or chat information.`
+
+Send /info with user id
+Forward a message from chat and reply /info"""
+
+BUTTONS = []
+
+
 @Client.on_message(
     (filters.private | filters.group) &
     filters.user(AUTH_USERS) if PRIVATE else None &
