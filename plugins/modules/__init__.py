@@ -7,4 +7,4 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-MODULES = []
+MODULES = {}
