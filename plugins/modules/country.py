@@ -24,7 +24,7 @@ BUTTONS = []
     filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def countryinfo(bot, update):
-    country = update.text.split(" ", -1)
+    country = update.text.split(" ", 1)[1]
     country = CountryInfo(country)
     info = f"""--**Country Information**--
 
