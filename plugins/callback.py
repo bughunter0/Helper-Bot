@@ -4,6 +4,7 @@ from pyrogram import Client
 from .commands import *
 from .modules import modules
 
+
 @Client.on_callback_query(
     filters.user(AUTH_USERS) if PRIVATE else None
 )
