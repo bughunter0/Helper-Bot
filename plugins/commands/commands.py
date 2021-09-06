@@ -6,7 +6,7 @@ from plugins.commands import *
 
 @Client.on_message(
     filters.private &
-    filters.command(["start", "help", "about"]) &
+    filters.command &
     filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def command(bot, update):
@@ -18,9 +18,13 @@ async def command(bot, update):
             await help(bot, update)
         elif text == "/about":
             await about(bot, update)
+        else:
+            await modules(bot, update)
     elif len(text.split()) > 1:
         text = text.split(" ", 1)[1]
         if text == "help":
             await help(bot, update)
         elif text == "about":
             await about(bot, update)
+        else:
+            await modules(bot, update)
