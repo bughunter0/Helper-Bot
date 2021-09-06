@@ -5,8 +5,17 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
+
+TEXT = """**Covid 19 Information**
+
+Send /covid with country name for covid information of that country.
+
+Like :- `/covid India`"""
+
+BUTTONS = []
+
 @Client.on_message(
-    filters.command(["covid_info", "corona_info"]) &
+    filters.command(["corona", "covid", "covid_info", "corona_info"]) &
     filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def covid_info(bot, update):
