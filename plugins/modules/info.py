@@ -16,12 +16,13 @@ BUTTONS = []
 
 
 @Client.on_message(
-    filters.user(AUTH_USERS) if PRIVATE else None &
     filters.command(
         ["info", "information"]
     )
 )
 async def _info(bot, update):
+    if PRIVATE and not AUTH_USERS:
+        return
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
         info = user_info(update.from_user)
     elif update.reply_to_message and update.reply_to_message.forward_from:
