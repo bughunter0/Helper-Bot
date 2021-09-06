@@ -18,7 +18,8 @@ BUTTONS = []
 @Client.on_message(
     filters.command(
         ["info", "information"]
-    )
+    ),
+    group=1
 )
 async def _info(bot, update):
     if PRIVATE and not AUTH_USERS:
