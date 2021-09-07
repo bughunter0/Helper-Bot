@@ -48,7 +48,7 @@ async def modules_help(bot, update, cb=False):
     buttons = []
     for module in MODULES:
         button = InlineKeyboardButton(
-            text=MODULES[module]["text"],
+            text=MODULES[module.lower()]["text"],
             callback_data="module+"+module
         )
         if len(buttons) == 0 or len(buttons[-1]) >= 2:
