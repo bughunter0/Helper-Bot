@@ -6,6 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
+@Client.on_message(filters.command(["country" "countryinfo"]), group=1)
 async def country(bot, update):
     country = update.text.split(" ", 1)[1]
     country = CountryInfo(country)
