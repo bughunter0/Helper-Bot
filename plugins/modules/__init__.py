@@ -46,7 +46,7 @@ async def modules_help(bot, update, cb=False):
     buttons = []
     for module in MODULES:
         button = InlineKeyboardButton(
-            text=MODULES[module.lower()]["text"],
+            text=MODULES[module]["text"],
             callback_data="module+"+module
         )
         if len(buttons) == 0 or len(buttons[-1]) >= 2:
@@ -72,7 +72,7 @@ async def modules_help(bot, update, cb=False):
 @Client.on_message(filters.command(["module"]), group=1)
 async def modules_help(bot, update):
     try:
-        module = update.text.split(" ", 1)[1]
+        module = update.text.split(" ", 1)[1].lower()
         await update.reply_text(
             text=MODULES[module]["help_text"],
             disable_web_page_preview=True,
