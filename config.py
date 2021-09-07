@@ -35,6 +35,7 @@ ABOUT_TEXT = """**About Me**--
 ➠ **Creator :** [Fayas](https://telegram.me/TheFayas)
 ➠ **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
 ➠ **Credits :** `Everyone in this journey`
+➠ **Source Code :** [Helper-Bot](https://github.com/TelegramHelpBot/Helper-Bot)
 ➠ **Language :** [Python3](https://python.org)
 ➠ **Library :** [Pyrogram](https://pyrogram.org)
 ➠ **Server :** [Heroku](https://heroku.com)"""
