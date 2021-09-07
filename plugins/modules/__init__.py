@@ -13,6 +13,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # "help_buttons" for extra buttons
 
 MODULES = {
+    "attach": {
+        "text": "Attach",
+        "help_text": "**Attach**\n\n- Just send a html or markdown message\n\n- Reply /attach with link for attaching",
+        "help_buttons": []
+    },
     "country": {
         "text": "Country Info",
         "help_text": "**Country Information**\n\nSend /country with country name for information of that country.\n\nLike :- `/country India`",
