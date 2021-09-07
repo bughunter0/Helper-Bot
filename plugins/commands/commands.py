@@ -11,8 +11,7 @@ from . import *
         [
             "start",
             "help",
-            "about",
-            "modules"
+            "about"
         ]
     ) &
     filters.user(AUTH_USERS) if PRIVATE else None
@@ -26,17 +25,9 @@ async def command(bot, update):
             await help(bot, update)
         elif text == "/about":
             await about(bot, update)
-        elif text.startswith("/module"):
-            await modules_help(bot, update)
-        else:
-            await modules_commands(bot, update)
     elif len(text.split()) > 1:
         text = text.split(" ", 1)[1]
         if text == "help":
             await help(bot, update)
         elif text == "about":
             await about(bot, update)
-        elif text.startswith("module"):
-            await modules_help(bot, update)
-        else:
-            await modules_commands(bot, update, linked=True)
