@@ -5,7 +5,6 @@
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
 from pyrogram import Client, filters
-from . import country, covid, info, json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
