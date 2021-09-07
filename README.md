@@ -37,3 +37,4 @@ python3 main.py
 
 - [Fayas Noushad](https://github.com/FayasNoushad)
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
+- [Contributors](https://github.com/TelegramHelpBot/Helper-Bot/graphs/contributors)
