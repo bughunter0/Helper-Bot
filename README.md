@@ -35,6 +35,12 @@ python3 main.py
 
 ---
 
+## Contribute
+
+**Check [CONTRIBUTING.md](https://github.com/TelegramHelpBot/Helper-Bot/blob/main/CONTRIBUTING.md) file for more information about contribution.**
+
+---
+
 ## Credits
 
 - [Fayas Noushad](https://github.com/FayasNoushad)
