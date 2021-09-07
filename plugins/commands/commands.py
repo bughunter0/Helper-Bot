@@ -6,6 +6,29 @@ from . import *
 from ..modules import modules_help, modules_commands
 
 
+@Client.on_message(filters.group & filters.command)
+async def group_filter(bot, update):
+    if update.text == "modules" or update.text == "module" or len(update.text.split()) == 1:
+        return
+    if update.text.startswith("module"):
+        await update.reply_text(
+            text="Click the button below for more help",
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            "Click here",
+                            url="https://telegram.me/"+(await bot.get_me()).username+"?start="+module 
+                        )
+                    ]
+                ]
+            ),
+            quote=True
+        )
+    else:
+        await modules_commands(bot, update)
+
+
 @Client.on_message(
     filters.private &
     filters.command(
