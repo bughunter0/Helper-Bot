@@ -40,6 +40,7 @@ MODULES = {
 }
 
 
+@Client.on_message(filters.command(["modules"], group=1)
 async def modules_help(bot, update, cb=False):
     if cb and update.data.startswith("module+"):
         await modules_cb(bot, update)
@@ -88,6 +89,7 @@ async def modules_commands(bot, update, linked=False):
         await response_json(bot, update)
 
 
+@Client.on_message(filters.command(["module"], group=1)
 async def modules_help(bot, update):
     module = update.text.split(" ", 1)[1]
     await update.reply_text(
