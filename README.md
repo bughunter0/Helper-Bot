@@ -31,6 +31,8 @@ python3 main.py
 - `API_ID` Your API ID from my.telegram.org
 - `BOT_TOKEN` Your bot token from @BotFather
 
+#### Check other not required variables in [config.py](https://github.com/TelegramHelpBot/Helper-Bot/blob/main/config.py) file.
+
 ---
 
 ## Credits
