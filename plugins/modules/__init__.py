@@ -68,14 +68,17 @@ async def modules_help(bot, update, cb=False):
 
 
 async def modules_commands(bot, update, linked=False):
-    command = update.text
-    if command.startswith("/country"):
+    if linked:
+        command = update.text.split(" ", 1)[1]
+    else:
+        command = update.text.split("/", 1)[1]
+    if command.startswith("country"):
         await country(bot, update)
-    elif command.startswith("/covid"):
+    elif command.startswith("covid"):
         await covid_info(bot, update)
-    elif command.startswith("/info"):
+    elif command.startswith("info"):
         await information(bot, update)
-    elif command.startswith("/json"):
+    elif command.startswith("json"):
         await response_json(bot, update)
 
 
