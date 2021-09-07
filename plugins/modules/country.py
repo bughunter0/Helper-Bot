@@ -39,7 +39,8 @@ Made by @FayasNoushad"""
         await update.reply_text(
             text=info,
             reply_markup=reply_markup,
-            disable_web_page_preview=True
+            disable_web_page_preview=True,
+            quote=True
         )
     except Exception as error:
         print(error)
