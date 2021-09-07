@@ -40,4 +40,4 @@ async def command(bot, update):
         elif text.startswith("module"):
             await modules_help(bot, update)
         else:
-            await modules_commands(bot, update)
+            await modules_commands(bot, update, linked=True)
