@@ -8,6 +8,7 @@ BOT_TOKEN = os.environ["BOT_TOKEN"]
 API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
 BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
+AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
 PRIVATE = bool(os.environ.get("PRIVATE", False))
 
 START_TEXT = """**Hello {} 😌
