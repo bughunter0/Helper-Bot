@@ -74,9 +74,10 @@ async def modules_help(bot, update, cb=False):
 async def modules_commands(bot, update, linked=False):
     if linked:
         await modules_help(bot, update)
+        return 
+    if len(update.text.split("/", 1)) <= 1:
         return
-    else:
-        command = update.text.split("/", 1)[1]
+    command = update.text.split("/", 1)[1]
     if command.startswith("country"):
         await country(bot, update)
     elif command.startswith("covid"):
