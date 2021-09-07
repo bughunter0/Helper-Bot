@@ -82,5 +82,5 @@ async def modules_commands(bot, update):
 async def modules_cb(bot, update):
     module = update.data.split("+")[1]
     await update.message.edit_text(
-        text=module["help"]["text"]
+        text=MODULES[module]["help"]["text"]
     )
