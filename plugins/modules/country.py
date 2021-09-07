@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@Client.on_message(filters.command(["country" "countryinfo"]), group=1)
+@Client.on_message(filters.command(["country", "countryinfo"]), group=1)
 async def country_info(bot, update):
     country = update.text.split(" ", 1)[1]
     country = CountryInfo(country)
@@ -24,7 +24,7 @@ Currencies : `{country.currencies()}`
 Residence : `{country.demonym()}`
 Timezone : `{country.timezones()}`
 
-Made by @FayasNoushad"""
+Made by **@FayasNoushad**"""
     country_name = country.name()
     country_name = country_name.replace(" ", "+")
     reply_markup=InlineKeyboardMarkup(
