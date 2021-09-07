@@ -11,6 +11,12 @@ API = "https://api.sumanjay.cf/covid/?country="
 
 @Client.on_message(filters.command(["covid", "corona"]), group=1)
 async def covid_info(bot, update):
+    if len(update.text.split()) <= 1:
+        await update.reply_text(
+            text="Send command with country name",
+            quote=True
+        )
+        return
     try:
         country = update.text.split(" ", 1)[1]
         country = country.replace(" ", "+")
