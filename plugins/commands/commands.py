@@ -8,9 +8,9 @@ from ..modules import modules_help, modules_commands
 
 @Client.on_message(filters.group & filters.command, group=1)
 async def group_filter(bot, update):
-    if update.text == "modules" or update.text == "module":
+    if update.text == "/modules" or update.text == "/module":
         return
-    if update.text.startswith("module"):
+    if update.text.startswith("/module"):
         await update.reply_text(
             text="Click the button below for more help",
             reply_markup=InlineKeyboardMarkup(
