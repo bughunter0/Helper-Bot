@@ -7,7 +7,6 @@ from ..modules import modules_help, modules_commands
 
 
 @Client.on_message(
-    filters.private &
     filters.command(
         [
             "start",
@@ -20,7 +19,7 @@ from ..modules import modules_help, modules_commands
 )
 async def command(bot, update):
     text = update.text
-    if len(text.split()) == 1:
+    if update.chat.type == "private" and len(text.split()) == 1:
         if text == "/start":
             await start(bot, update)
         elif text == "/help":
