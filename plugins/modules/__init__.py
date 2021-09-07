@@ -5,7 +5,7 @@
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
 from . import country, covid, info, json
-from .country import country
+from .country import country, country_filter
 from .covid import covid_info
 from .info import information
 from .json import response_json
@@ -81,3 +81,6 @@ async def modules_commands(bot, update):
 
 async def modules_cb(bot, update):
     module = update.data.split("+")[1]
+    await update.message.edit_text(
+        text=module["help"]["text"]
+    )
