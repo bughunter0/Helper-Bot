@@ -6,7 +6,7 @@ from . import *
 from ..modules import modules_help, modules_commands
 
 
-@Client.on_message(filters.group & filters.command)
+@Client.on_message(filters.group & filters.command, group=1)
 async def group_filter(bot, update):
     if update.text == "modules" or update.text == "module":
         return
