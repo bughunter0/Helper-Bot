@@ -6,6 +6,8 @@
 
 ## How to Contribute
 
+Fork this repository and edit then contribute.
+
 ### How to add a module 
 
 - Add module as a file in `plugins/modules`
