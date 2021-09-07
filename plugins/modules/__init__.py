@@ -4,11 +4,8 @@
 # All rights reserved by FayasNoushad
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
+from pyrogram import Client, filters
 from . import country, covid, info, json
-from .country import country
-from .covid import covid_info
-from .info import information
-from .json import response_json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
@@ -40,6 +37,7 @@ MODULES = {
 }
 
 
+@Client.on_message(filters.command(["modules"]), group=1)
 async def modules_help(bot, update, cb=False):
     if cb and update.data.startswith("module+"):
         await modules_cb(bot, update)
@@ -48,7 +46,7 @@ async def modules_help(bot, update, cb=False):
     buttons = []
     for module in MODULES:
         button = InlineKeyboardButton(
-            text=MODULES[module.lower()]["text"],
+            text=MODULES[module]["text"],
             callback_data="module+"+module
         )
         if len(buttons) == 0 or len(buttons[-1]) >= 2:
@@ -71,33 +69,20 @@ async def modules_help(bot, update, cb=False):
         )
 
 
-async def modules_commands(bot, update, linked=False):
-    if linked:
-        await modules_help(bot, update)
-        return 
-    if len(update.text.split("/", 1)) <= 1:
-        return
-    command = update.text.split("/", 1)[1]
-    if command.startswith("country"):
-        await country(bot, update)
-    elif command.startswith("covid"):
-        await covid_info(bot, update)
-    elif command.startswith("info"):
-        await information(bot, update)
-    elif command.startswith("json"):
-        await response_json(bot, update)
-
-
+@Client.on_message(filters.command(["module"]), group=1)
 async def modules_help(bot, update):
-    module = update.text.split(" ", 1)[1]
-    await update.reply_text(
-        text=MODULES[module]["help_text"],
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="🔙 Back", callback_data="modules")]]
-        ),
-        quote=True
-    )
+    try:
+        module = update.text.split(" ", 1)[1].lower()
+        await update.reply_text(
+            text=MODULES[module]["help_text"],
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="modules")]]
+            ),
+            quote=True
+        )
+    except:
+        pass
 
 
 async def modules_cb(bot, update):

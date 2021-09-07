@@ -6,7 +6,8 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-async def country(bot, update):
+@Client.on_message(filters.command(["country" "countryinfo"]), group=1)
+async def country_info(bot, update):
     country = update.text.split(" ", 1)[1]
     country = CountryInfo(country)
     info = f"""--**Country Information**--
@@ -38,7 +39,8 @@ Made by @FayasNoushad"""
         await update.reply_text(
             text=info,
             reply_markup=reply_markup,
-            disable_web_page_preview=True
+            disable_web_page_preview=True,
+            quote=True
         )
     except Exception as error:
         print(error)

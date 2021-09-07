@@ -5,6 +5,7 @@ from io import BytesIO
 from config import *
 
 
+@Client.on_message(filters.command(["json", "response"]), group=1)
 async def response_json(bot, update):
     json = update.reply_to_message
     with BytesIO(str.encode(str(json))) as json_file:
