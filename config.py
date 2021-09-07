@@ -11,21 +11,22 @@ BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
 PRIVATE = bool(os.environ.get("PRIVATE", False))
 
 START_TEXT = """**Hello {} 😌
-I am telegram developers bot.**
+I am telegram helper bot.**
 
->> `I have more features for developers`
+>> `I have more features for users`
 
 Made by @FayasNoushad"""
 
 HELP_TEXT = """**Hey, Follow these steps:**
 
-I am a developer helper bot. Use the commands below for more.
+I am an user helper bot. Use the commands below for more.
 
 **Available Commands**
 
 /start - Checking Bot Online
 /help - For more help
 /about - For more about me
+/modules - For more modules
 
 Made by @FayasNoushad"""
 
