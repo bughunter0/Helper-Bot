@@ -70,15 +70,18 @@ async def modules_help(bot, update, cb=False):
 
 @Client.on_message(filters.command(["module"]), group=1)
 async def modules_help(bot, update):
-    module = update.text.split(" ", 1)[1]
-    await update.reply_text(
-        text=MODULES[module]["help_text"],
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="🔙 Back", callback_data="modules")]]
-        ),
-        quote=True
-    )
+    try:
+        module = update.text.split(" ", 1)[1]
+        await update.reply_text(
+            text=MODULES[module]["help_text"],
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="modules")]]
+            ),
+            quote=True
+        )
+    except:
+        pass
 
 
 async def modules_cb(bot, update):
