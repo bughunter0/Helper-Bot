@@ -69,7 +69,7 @@ async def modules_help(bot, update, cb=False):
 
 
 @Client.on_message(filters.command(["module"]), group=1)
-async def modules_help(bot, update):
+async def module_help(bot, update):
     try:
         module = update.text.split(" ", 1)[1].lower()
         await update.reply_text(
