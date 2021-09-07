@@ -73,7 +73,8 @@ async def modules_help(bot, update, cb=False):
 
 async def modules_commands(bot, update, linked=False):
     if linked:
-        command = update.text.split(" ", 1)[1]
+        await modules_help(bot, update)
+        return
     else:
         command = update.text.split("/", 1)[1]
     if command.startswith("country"):
@@ -84,6 +85,18 @@ async def modules_commands(bot, update, linked=False):
         await information(bot, update)
     elif command.startswith("json"):
         await response_json(bot, update)
+
+
+async def modules_help(bot, update):
+    module = update.text.split(" ", 1)[1]
+    await update.reply_text(
+        text=MODULES[module]["help_text"],
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="🔙 Back", callback_data="modules")]]
+        ),
+        quote=True
+    )
 
 
 async def modules_cb(bot, update):
