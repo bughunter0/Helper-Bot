@@ -67,7 +67,7 @@ async def modules_help(bot, update, cb=False):
         )
 
 
-async def modules_commands(bot, update):
+async def modules_commands(bot, update, linked=False):
     command = update.text
     if command.startswith("/country"):
         await country(bot, update)
