@@ -82,5 +82,9 @@ async def modules_commands(bot, update):
 async def modules_cb(bot, update):
     module = update.data.split("+")[1]
     await update.message.edit_text(
-        text=MODULES[module]["help"]["text"]
+        text=MODULES[module]["help_text"],
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="🔙 Back", callback_data="modules")]]
+        )
     )
