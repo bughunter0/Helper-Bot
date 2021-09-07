@@ -3,30 +3,6 @@
 from config import *
 from pyrogram import Client, filters
 from . import *
-from ..modules import modules_help, modules_commands
-
-
-@Client.on_message(filters.group & filters.command, group=1)
-async def group_filter(bot, update):
-    if update.text == "/modules" or update.text == "/module":
-        return
-    if update.text.startswith("/module") and len(update.text.split()) >= 2:
-        await update.reply_text(
-            text="Click the button below for more help",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            "Click here",
-                            url="https://telegram.me/"+(await bot.get_me()).username+"?start="+module 
-                        )
-                    ]
-                ]
-            ),
-            quote=True
-        )
-    else:
-        await modules_commands(bot, update)
 
 
 @Client.on_message(
