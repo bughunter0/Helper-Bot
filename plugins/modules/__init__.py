@@ -45,7 +45,7 @@ async def modules_help(bot, update, cb=False):
     for module in MODULES:
         button = InlineKeyboardButton(
             text=MODULES[module]["text"],
-            callback_data="module"+module
+            callback_data="module+"+module
         )
         if len(buttons) == 0 or len(buttons[-1]) >= 2:
             buttons.append([button])
