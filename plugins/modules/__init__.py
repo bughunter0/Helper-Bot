@@ -12,6 +12,10 @@ from .json import response_json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
+# "text" for adding text in module buttons.
+# "help_text" for more information about module.
+# "help_buttons" for extra buttons
+
 MODULES = {
     "country": {
         "text": "Country Info",
