@@ -5,7 +5,6 @@
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
 from pyrogram import Client, filters
-from . import country, covid, info, json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
@@ -81,8 +80,8 @@ async def modules_help(bot, update):
             ),
             quote=True
         )
-    except:
-        pass
+    except Exception as error:
+        print(error)
 
 
 async def modules_cb(bot, update):
