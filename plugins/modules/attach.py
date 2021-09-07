@@ -8,7 +8,8 @@ async def attach(bot, update):
     if len(update.text.split()) <= 1:
         await update.reply_text("Send command with link for attaching")
         return
+    link = update.text.split(" ", 1)[1]
     await update.reply_text(
-        text=f"[\u2063]({update.text.split(" ", 1)[1]}){update.reply_to_message.text}",
+        text=f"[\u2063]({link}){update.reply_to_message.text}",
         reply_markup=update.reply_to_message.reply_markup
     )
