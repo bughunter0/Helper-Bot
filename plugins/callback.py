@@ -7,7 +7,7 @@ from .modules import modules_help
 
 
 @Client.on_callback_query(
-    filters.user(BOT_OWNER) if PRIVATE else None
+    filters.user(AUTH_USERS) if PRIVATE else None
 )
 async def cb_handler(bot, update):
     if update.data == "home":
