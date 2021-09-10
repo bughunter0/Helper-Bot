@@ -98,7 +98,7 @@ async def module_help(bot: Client, update: Message):
         )
 
 
-async def modules_cb(update: CallbackQuery):
+async def modules_cb(update):
     module = update.data.split("+")[1]
     await update.message.edit_text(
         text=MODULES[module]["help_text"],
