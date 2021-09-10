@@ -47,7 +47,7 @@ MODULES = {
 
 
 @Client.on_message(filters.command(["modules"]), group=1)
-async def modules_help(bot, update, cb=False):
+async def modules_help(update, cb=False):
     if cb and update.data.startswith("module+"):
         await modules_cb(bot, update)
         return
