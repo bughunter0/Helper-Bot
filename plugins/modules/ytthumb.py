@@ -34,6 +34,8 @@ async def youtube_thumbnail(update):
         except Exception as error:
             await update.reply_text(
                 text=error,
-                reply_markup=reply_markup
+                disable_web_page_preview=True,
+                reply_markup=reply_markup,
+                quote=True
             )
             
