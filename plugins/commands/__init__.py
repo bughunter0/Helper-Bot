@@ -2,7 +2,7 @@
 
 from config import *
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 async def start(update, cb=False):

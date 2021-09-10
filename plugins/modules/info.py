@@ -1,12 +1,12 @@
 # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
 
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
 
 @Client.on_message(filters.command(["info", "information"]), group=1)
-async def information(bot, update):
+async def information(update: Message):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
         info = user_info(update.from_user)
     elif update.reply_to_message and update.reply_to_message.forward_from:

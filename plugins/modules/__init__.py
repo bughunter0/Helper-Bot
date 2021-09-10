@@ -5,7 +5,7 @@
 # License -> https://github.com/TelegramHelpBot/Helper-Bot/blob/main/LICENSE
 
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 # "text" for adding text in module buttons.
@@ -47,7 +47,7 @@ MODULES = {
 
 
 @Client.on_message(filters.command(["modules"]), group=1)
-async def modules_help(update, cb=False):
+async def modules_help(update: Message, cb=False):
     if cb and update.data.startswith("module+"):
         await modules_cb(update)
         return
@@ -79,7 +79,7 @@ async def modules_help(update, cb=False):
 
 
 @Client.on_message(filters.command(["module"]), group=1)
-async def module_help(bot, update):
+async def module_help(bot: Client, update: Message):
     try:
         module = update.text.split(" ", 1)[1].lower()
         await update.reply_text(
@@ -98,7 +98,7 @@ async def module_help(bot, update):
         )
 
 
-async def modules_cb(update):
+async def modules_cb(update: CallbackQuery):
     module = update.data.split("+")[1]
     await update.message.edit_text(
         text=MODULES[module]["help_text"],

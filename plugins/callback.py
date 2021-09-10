@@ -2,6 +2,7 @@
 
 from config import *
 from pyrogram import Client
+from pyrogram.types import CallbackQuery
 from .commands import *
 from .modules import modules_help
 
@@ -9,7 +10,7 @@ from .modules import modules_help
 @Client.on_callback_query(
     filters.user(AUTH_USERS) if PRIVATE else None
 )
-async def cb_handler(bot, update):
+async def cb_handler(bot: Client, update: CallbackQuery):
     if update.data == "home":
         await start(update, cb=True)
     elif update.data == "help":

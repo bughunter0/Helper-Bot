@@ -2,6 +2,7 @@
 
 from config import *
 from pyrogram import Client, filters
+from pyrogram.types import Message
 from . import *
 
 
@@ -16,7 +17,7 @@ from . import *
     ) &
     filters.user(AUTH_USERS) if PRIVATE else None
 )
-async def command(bot, update):
+async def command(bot: Client, update: Message):
     text = update.text
     if len(text.split()) == 1:
         if text == "/start":

@@ -1,13 +1,13 @@
 import ytthumb
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 @Client.on_message(
     filters.command(["ytthumb", "thumbnail"]),
     group=1
 )
-async def youtube_thumbnail(update):
+async def youtube_thumbnail(update: Message):
     reply_markup = InlineKeyboardMarkup(
         [[InlineKeyboardButton('Join Updates Channel', url='https://telegram.me/FayasNoushad')]]
     )
