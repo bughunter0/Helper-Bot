@@ -6,7 +6,7 @@ from config import *
 
 
 @Client.on_message(filters.command(["json", "response"]), group=1)
-async def response_json(bot, update):
+async def response_json(update):
     json = update.reply_to_message
     with BytesIO(str.encode(str(json))) as json_file:
         json_file.name = "json.text"
