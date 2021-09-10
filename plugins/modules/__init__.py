@@ -37,6 +37,11 @@ MODULES = {
         "text": "Response Json",
         "help_text": "**Response Json**\n\n`For getting json response`\n\nSend /json command with reply a message.",
         "help_buttons": []
+    },
+    "ytthumb": {
+        "text": "YouTube Thumbnail",
+        "help_text": "**YouTube Thumbnail**\n\n`For YouTube videos thumbnail`\n\n- Send a /ytthumb with youtube video link or video ID.\n- I will send the thumbnail.\n- You can also send youtube video link or video id with quality.\n  - sd - Standard Quality\n  - mq - Medium Quality\n  - hq - High Quality\n  - maxres - Maximum Resolution\n\n**Example:** `/ytthumb rokGy0huYEA sd`",
+        "help_buttons": []
     }
 }
 
