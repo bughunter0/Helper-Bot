@@ -11,12 +11,12 @@ from .modules import modules_help
 )
 async def cb_handler(bot, update):
     if update.data == "home":
-        await start(bot, update, cb=True)
+        await start(update, cb=True)
     elif update.data == "help":
-        await help(bot, update, cb=True)
+        await help(update, cb=True)
     elif update.data == "about":
         await about(bot, update, cb=True)
     elif update.data == "close":
         await update.message.delete()
     elif update.data.startswith("module"):
-        await modules_help(bot, update, cb=True)
+        await modules_help(update, cb=True)
