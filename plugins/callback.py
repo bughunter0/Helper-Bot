@@ -20,4 +20,4 @@ async def cb_handler(bot: Client, update: CallbackQuery):
     elif update.data == "close":
         await update.message.delete()
     elif update.data.startswith("module"):
-        await modules_help(update, cb=True)
+        await modules_help(bot, update, cb=True)
