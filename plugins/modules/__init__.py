@@ -93,7 +93,7 @@ async def module_help(bot, update):
     except Exception as error:
         await update.reply_text(
             text=error,
-            disable_web_page_preview=True
+            disable_web_page_preview=True,
             quote=True
         )
 
