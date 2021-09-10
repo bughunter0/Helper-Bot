@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-async def start(bot, update, cb=False):
+async def start(update, cb=False):
     text=START_TEXT.format(update.from_user.mention)
     if cb:
         await update.message.edit_text(text=text, disable_web_page_preview=True, reply_markup=START_BUTTONS)
@@ -13,7 +13,7 @@ async def start(bot, update, cb=False):
         await update.reply_text(text=text, disable_web_page_preview=True, quote=True, reply_markup=START_BUTTONS)
 
 
-async def help(bot, update, cb=False):
+async def help(update, cb=False):
     if cb:
         await update.message.edit_text(text=HELP_TEXT, disable_web_page_preview=True, reply_markup=HELP_BUTTONS)
     else:

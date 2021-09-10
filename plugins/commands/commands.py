@@ -20,14 +20,14 @@ async def command(bot, update):
     text = update.text
     if len(text.split()) == 1:
         if text == "/start":
-            await start(bot, update)
+            await start(update)
         elif text == "/help":
-            await help(bot, update)
+            await help(update)
         elif text == "/about":
             await about(bot, update)
     elif len(text.split()) > 1:
         text = text.split(" ", 1)[1]
         if text == "help":
-            await help(bot, update)
+            await help(update)
         elif text == "about":
             await about(bot, update)
