@@ -3,5 +3,6 @@ tgcrypto
 
 requests
 
+ytthumb
 countryinfo
 pyshorteners
