@@ -43,4 +43,8 @@ Made by **@FayasNoushad**"""
             quote=True
         )
     except Exception as error:
-        await update.reply_text(error)
+        await update.reply_text(
+            text=error,
+            disable_web_page_preview=True,
+            quote=True
+        )
