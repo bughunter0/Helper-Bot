@@ -43,4 +43,4 @@ Made by **@FayasNoushad**"""
             quote=True
         )
     except Exception as error:
-        print(error)
+        await update.reply_text(error)
