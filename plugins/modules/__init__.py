@@ -91,10 +91,14 @@ async def module_help(bot, update):
             quote=True
         )
     except Exception as error:
-        print(error)
+        await update.reply_text(
+            text=error,
+            disable_web_page_preview=True
+            quote=True
+        )
 
 
-async def modules_cb(bot, update):
+async def modules_cb(update):
     module = update.data.split("+")[1]
     await update.message.edit_text(
         text=MODULES[module]["help_text"],
