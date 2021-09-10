@@ -4,7 +4,7 @@ from config import *
 from pyrogram import Client
 from pyrogram.types import CallbackQuery
 from .commands import *
-from .modules import modules_help
+from .modules import modules_cb
 
 
 @Client.on_callback_query(
@@ -20,4 +20,4 @@ async def cb_handler(bot: Client, update: CallbackQuery):
     elif update.data == "close":
         await update.message.delete()
     elif update.data.startswith("module"):
-        await modules_help(bot, update, cb=True)
+        await modules_cb(update, cb=True)
